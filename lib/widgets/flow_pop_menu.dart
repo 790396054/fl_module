@@ -40,10 +40,9 @@ class _DemoFlowPopMenuState extends State<DemoFlowPopMenu> with SingleTickerProv
     );
   }
 
-//生成Popmenu数据
+  //生成Popmenu数据
   Widget flowMenuItem(IconData icon) {
-    final double buttonDiameter =
-        MediaQuery.of(context).size.width * 2 / (menuItems.length * 3);
+    final double buttonDiameter = MediaQuery.of(context).size.width * 2 / (menuItems.length * 3);
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: RawMaterialButton(
@@ -64,9 +63,7 @@ class _DemoFlowPopMenuState extends State<DemoFlowPopMenu> with SingleTickerProv
     return Center(
       child: Flow(
         delegate: FlowMenuDelegate(animation: _ctrlAnimationPopMenu),
-        children: menuItems
-            .map<Widget>((IconData icon) => flowMenuItem(icon))
-            .toList(),
+        children: menuItems.map<Widget>((IconData icon) => flowMenuItem(icon)).toList(),
       ),
     );
   }

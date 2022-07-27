@@ -1,3 +1,4 @@
+import 'package:fl_module/widgets/flow_pop_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:oktoast/oktoast.dart';
 
@@ -15,55 +16,49 @@ class _MyPageState extends State<MyPage> {
         iconColor: Colors.blue,
         title: '消息中心',
         pageUrl: 'demo/chartPage',
-        suffix: _NotificationsText(
-          text: '2',
-        )),
+        suffix: const _NotificationsText(text: '2',)),
     SettingModel(iconData: Icons.thumb_up,
         iconColor: Colors.green,
         title: '我赞过的',
-        suffix: _Suffix(
-          text: '121篇',
-        )),
+        pageUrl: 'demo/buttonCase',
+        suffix: const _Suffix(text: '121篇',)),
     SettingModel(iconData: Icons.grade,
         iconColor: Colors.yellow,
         title: '收藏集',
-        suffix: _Suffix(
-          text: '2个',
-        )),
+        pageUrl: 'demo/drawingBoard',
+        suffix: const _Suffix(text: '2个',)),
     SettingModel(iconData: Icons.shopping_basket,
         iconColor: Colors.yellow,
         title: '已购小册',
-        suffix: _Suffix(
-          text: '100个',
-        )),
+        pageUrl: 'demo/sliverPage',
+        suffix: const _Suffix(text: '100个',)),
     SettingModel(iconData: Icons.account_balance_wallet,
         iconColor: Colors.blue,
         title: '我的钱包',
-        suffix: _Suffix(
-          text: '10万',
-        )),
+        pageUrl: 'demo/nestedScrollviewPage',
+        suffix: const _Suffix(text: '10万',)),
     SettingModel(iconData: Icons.location_on,
         iconColor: Colors.grey,
         title: '阅读过的文章',
-        suffix: _Suffix(
-          text: '1034篇',
-        )),
+        suffix: const _Suffix(text: '1034篇',)),
     SettingModel(iconData: Icons.local_offer,
         iconColor: Colors.grey,
         title: '标签管理',
-        suffix: _Suffix(
-          text: '27个',
-        )),
+        suffix: const _Suffix(text: '27个',)),
   ];
 
   @override
   Widget build(BuildContext context) {
-    // return WebViewWidget(url: "https://m.ctrip.com/webapp/myctrip/",);
     return Scaffold(
         appBar: AppBar(
           title: const Text("我的"),
         ),
-        // floatingActionButton: DemoFlowPopMenu(),
+        // floatingActionButton: FloatingActionButton(
+        //   child: DemoFlowPopMenu(),
+        //   onPressed: () {
+        //
+        //   },
+        // ),
         // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         body: Container(
           margin: const EdgeInsets.only(top: 10),
